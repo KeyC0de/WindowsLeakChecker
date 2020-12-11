@@ -5,6 +5,7 @@
 #	define _CRTDBG_MAP_ALLOC_NEW
 #	include <crtdbg.h>
 #	include "assertions.h"
+#	include "winner.h"
 
 namespace debugLeak
 {

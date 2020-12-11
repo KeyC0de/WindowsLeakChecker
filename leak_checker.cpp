@@ -23,9 +23,14 @@ public:
 	~LeakChecker()
 	{
 		if ( anyMemoryLeaks() )
+		{
 			std::wcerr << L"Leaking.." << L'\n';
+		}
 		else
+		{
+			OutputDebugString( L"No leaks. : )\n" );
 			std::wcerr << L"No leaks. : )\n";
+		}
 	}
 	static inline void setupLeakChecker()
 	{

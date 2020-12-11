@@ -18,5 +18,6 @@ int main()
 		return exitHandle;
 	}
 
+	std::system( "pause" );
 	return 0;
 }
