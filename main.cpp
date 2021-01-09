@@ -2,11 +2,12 @@
 
 #include <iostream>
 
-#define pass (void)0
+#define pass_ (void)0
+
 
 void exitHandler0() 
 {
-	pass;
+	pass_;
 }
 
 int main()
@@ -14,7 +15,7 @@ int main()
 	const auto exitHandle = std::atexit( exitHandler0 );
 	if ( exitHandle != 0 )
 	{
-		std::wcerr << L"Registration failed\n";
+		std::cerr << "Registration failed\n";
 		return exitHandle;
 	}
 

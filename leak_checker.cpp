@@ -17,19 +17,19 @@ class LeakChecker
 public:
 	LeakChecker()
 	{
-		std::wcerr << L"Memory leak checker setup" << L'\n';
+		std::cerr << "Memory leak checker setup" << '\n';
 		setupLeakChecker();
 	}
 	~LeakChecker()
 	{
 		if ( anyMemoryLeaks() )
 		{
-			std::wcerr << L"Leaking.." << L'\n';
+			std::cerr << "Leaking.." << '\n';
 		}
 		else
 		{
 			OutputDebugString( L"No leaks. : )\n" );
-			std::wcerr << L"No leaks. : )\n";
+			std::cerr << "No leaks. : )\n";
 		}
 	}
 	static inline void setupLeakChecker()
