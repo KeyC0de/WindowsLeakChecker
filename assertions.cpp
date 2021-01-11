@@ -1,5 +1,5 @@
-#include "assertions.h"
 #include <iostream>
+#include "assertions.h"
 
 
 #if defined _DEBUG && !defined _NDEBUG

@@ -1,7 +1,7 @@
 #if defined(_DEBUG) || defined(DEBUG) || defined(debug) || defined(_debug)
 
-#	include "leak_checker.h"
 #	include <iostream>
+#	include "leak_checker.h"
 
 namespace debugLeak
 {
