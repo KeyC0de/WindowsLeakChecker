@@ -18,6 +18,7 @@ public:
 	{
 		if ( anyMemoryLeaks() )
 		{
+			OutputDebugStringW( L"Leaking..\n" );
 			std::cerr << "Leaking.." << '\n';
 		}
 		else
