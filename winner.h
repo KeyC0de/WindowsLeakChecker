@@ -74,7 +74,7 @@ static_assert( _MSVC_LANG >= 201703L,
 //#	define ANSI_ONLY				// no unicode support
 #	if defined NDEBUG || !defined _DEBUG 
 #		define NOPROFILER			// Profiler interface
-#	endif // _NDEBUG
+#	endif // NDEBUG
 #endif
 
 #if defined( _MFC_VER ) || defined( _AFX )
@@ -91,7 +91,7 @@ static_assert( _MSVC_LANG >= 201703L,
 
 #if defined NDEBUG || !defined _DEBUG 
 #	define _ITERATOR_DEBUG_LEVEL	0	// disable checked iterators & iterator debugging
-#endif // _NDEBUG
+#endif // NDEBUG
 //#define _SECURE_SCL 0				// deprecated for _ITERATOR_DEBUG_LEVEL
 #define _CRT_SECURE_NO_DEPRECATE	// non-secure c/winapi functions are not deprecated
 #define _CRT_SECURE_NO_WARNINGS 1
