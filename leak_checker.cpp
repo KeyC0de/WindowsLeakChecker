@@ -1,7 +1,7 @@
-#if defined(_DEBUG) || defined(DEBUG) || defined(debug) || defined(_debug)
-
+#if defined _DEBUG && !defined NDEBUG
 #	include <iostream>
 #	include "leak_checker.h"
+
 
 namespace debugLeak
 {
@@ -11,7 +11,7 @@ class LeakChecker
 public:
 	LeakChecker()
 	{
-		std::cerr << "Memory leak checker setup" << '\n';
+		std::cerr << "Memory leak checker setup\n";
 		setupLeakChecker();
 	}
 	~LeakChecker()

@@ -1,7 +1,6 @@
 #include <iostream>
 #include "assertions.h"
 
-
 #if defined _DEBUG && !defined NDEBUG
 
 #ifdef __cplusplus
