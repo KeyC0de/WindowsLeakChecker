@@ -6,14 +6,16 @@
 namespace debugLeak
 {
 
-class LeakChecker
+class LeakChecker final
 {
 public:
 	LeakChecker()
 	{
 		std::cerr << "Memory leak checker setup\n";
+		OutputDebugStringW( L"Memory leak checker setup\n" );
 		setupLeakChecker();
 	}
+
 	~LeakChecker()
 	{
 		if ( anyMemoryLeaks() )
@@ -27,6 +29,7 @@ public:
 			std::cerr << "No leaks. : )\n";
 		}
 	}
+
 	static inline void setupLeakChecker()
 	{
 		_CrtSetDbgFlag( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_REPORT_FLAG
