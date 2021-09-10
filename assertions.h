@@ -13,7 +13,7 @@ extern bool assertPrint( const char* expr,
 	const char* file,
 	int line,
 	const char* function,
-	const char* msg );
+	const char* msg = "" );
 
 // assert that arg is true, if not print error
 #		define ASSERT( arg, msg ) (!(arg) \
@@ -22,6 +22,14 @@ extern bool assertPrint( const char* expr,
 				__LINE__,\
 				__FUNCTION__,\
 				msg ) )
+
+// assert with the optional argument not supplied
+#		define ASSERTO( arg ) (!(arg) \
+			&& assertPrint( STRINGIFY( arg ),\
+				__FILE__,\
+				__LINE__,\
+				__FUNCTION__) )
+
 #	ifdef __cplusplus
 }
 #	endif
